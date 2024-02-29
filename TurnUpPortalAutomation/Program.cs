@@ -61,9 +61,8 @@ priceTextbox.SendKeys("50");
 // save new time and material entry
 IWebElement saveButton = driver.FindElement(By.Id("SaveButton"));
 saveButton.Click();
-Thread.Sleep(2000);
+Thread.Sleep(1000);
 
-// check that entry is saved or not
 IWebElement pageArrowButton = driver.FindElement(By.XPath("//*[@id=\"tmsGrid\"]/div[4]/a[4]/span"));
 pageArrowButton.Click();
 
@@ -76,5 +75,7 @@ if (newRecordDescription.Text == "Testing")
 }
 else
 {
-    Console.WriteLine("Record is not created");
+    Console.WriteLine("Record is not created.");
 }
+
+Console.WriteLine("New line added");
